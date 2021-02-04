@@ -48,16 +48,30 @@ h2 {
 a {
     color: #49aa26;
     text-decoration: none;
+    border: 1px solid  #49aa26;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 50px;
+    
 
+    
 }
 
 a:hover {
-    color: #3dd705;
+    color: white;
+    background: #49aa26;
+    
 }
 
 .button.new {
     display: inline-block;
     margin-bottom: 0.8rem;
+    
+}
+.button.new:hover {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    
 }
 
 .button.cancel {
@@ -73,6 +87,7 @@ a:hover {
 
 .button.cancel:hover {
     opacity: 1;
+    background: none;
 }
 
 button {
@@ -88,6 +103,30 @@ button {
     cursor: pointer;
 }
 
+.addfinance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+.addfinance b{
+    font-size: 18px;
+}
+
+
+.expenseE{
+    color: rgb(187, 7, 7);
+    border: 1px solid rgb(156, 2, 2);
+   
+
+}
+
+.expenseE:hover{
+    color:white;
+    border: 1px solid rgb(156, 2, 2);
+    background-color: rgb(187, 7, 7);
+}
 button:hover {
     background-color: #3dd705;
 }
@@ -97,6 +136,13 @@ header {
     background-color: blueviolet;
     padding: 2rem 0 10rem;
     text-align: center;
+}
+header h2 {
+    color: white;
+}
+
+header b {
+    color: #49aa26;
 }
 
 #logo {
@@ -204,6 +250,26 @@ td.expense {
 }
 
 /* MODAL ==============*/
+.modalE-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    top:0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index:999;
+}
+.modalE-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .modal-overlay {
     width: 100%;

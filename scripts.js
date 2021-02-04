@@ -3,13 +3,24 @@ const Modal = {
         // Abrir Modal
         //adicionar a class active ao modal
         document.querySelector('.modal-overlay').classList.add('active')
+        document.querySelector('.incomeE').classList.add('sr-only');
+        document.querySelector('.incomeF').classList.remove('sr-only')
     },
     close(){
         // Fechar modal
         //remover a class active ao modal
         document.querySelector('.modal-overlay').classList.remove('active')
+    },
+    openE(){
+        // Abrir Modal
+        //adicionar a class active ao modal
+        document.querySelector('.modal-overlay').classList.add('active')
+        document.querySelector('.incomeF').classList.add('sr-only');
+        document.querySelector('.incomeE').classList.remove('sr-only')
     }
 };
+
+
 
 const Storage = {
     get(){
@@ -167,6 +178,7 @@ const Form = {
             Form.clearFields()
 
             Modal.close()
+
             
 
 

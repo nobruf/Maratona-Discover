@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <img src="./assets/logo.svg" alt="Logomarca Dev Finance">
+        <h2>Minhas Finanças<b>.$</b></h2>
     </header>
     <main class="container">
 
@@ -22,32 +22,34 @@
 
             <div class="card">
                 <h3>
-                    <span>Entradas</span>
+                    <span>Receitas</span>
                     <img src="./assets/income.svg" alt="Image de entradas">
                 </h3>
                 <p id="incomeDisplay">R$ 0,00</p>
             </div>
             <div class="card">
                 <h3>
-                    <span>Saidas</span>
+                    <span>Despesas</span>
                     <img src="./assets/expense.svg" alt="Image de saídas">
                 </h3>
                 <p id="expenseDisplay">R$ 0,00</p>
             </div>
             <div class="card total">
                 <h3>
-                    <span>total</span>
+                    <span>Total</span>
                     <img src="./assets/total.svg" alt="Image de total">
                 </h3>
                 <p id="totalDisplay">R$ 0,00</p>
             </div>
 
         </section>
+            <div class="addfinance">
+            <a href="#" onclick="Modal.open()" class="button new">Adicionar <br> <b>Receita</b></a>
+            <a href="#" onclick="Modal.openE()" class="button new expenseE">Adcionar <br><b>Despesas</b></a>
+            </div>
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
-
-            <a href="#" onclick="Modal.open()" class="button new">+ Nova Transação</a>
-
+            
             <table id="data-table">
                 <thead>
                     <tr>
@@ -73,7 +75,8 @@
         <div class="modal">
 
             <div class="form">
-                <h2>Nova Transação</h2>
+                <h2 class="incomeF">Nova Receita</h2>
+                <h2 class="incomeE sr-only">Nova Despesa</h2>
                 <form action="" onsubmit ="Form.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="description">Descrição</label>
@@ -81,13 +84,13 @@
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="amount">Valor</label>
-                        <input type="number" id="amount" name="amount" placeholder="0,00" step="0.01" />
+                        <input type="number" id="amount" name="amount" placeholder="0,00" step="0.01"/>
                         <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas
                             decimais</small>
                     </div>
                     <div class="input-group">
                         <label class="sr-only" for="date">Data</label>
-                        <input type="date" id="date" name="date">
+                        <input type="date" id="date" name="date" placeholder="Data">
                     </div>
                     <div class="input-group actions">
                         <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
@@ -97,7 +100,10 @@
             </div>
 
         </div>
+        
     </div>
+
+  
 
     <footer>
         <p>dev.finance$</p>
